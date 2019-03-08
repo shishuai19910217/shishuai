@@ -1,0 +1,23 @@
+maps:
+########套餐规格#######
+ proNum: 1440
+ keywordNum: 1447
+ comNum: 1448
+ baiduPC: 1449
+ baiduM: 1450
+ sougouPC: 1451
+ sougouM: 1452
+ haosouPC: 1453
+ haosouM: 1454
+ shenmaM: 1441
+ crawlingPageNum: 11
+ defaultPhoto: default.png
+ 1449: 0
+ 1450: 1
+ 1451: 2
+ 1452: 3
+ 1453: 4
+ 1454: 5
+ 1441: 6
+ date: [20171225]
+ crawlDate:  20160418

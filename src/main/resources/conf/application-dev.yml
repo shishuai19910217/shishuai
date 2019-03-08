@@ -1,0 +1,93 @@
+server:
+  port: 8081
+  session-timeout: 30
+  context-path: /
+  tomcat.max-threads: 0
+  tomcat.uri-encoding: UTF-8
+
+
+spring:
+  primaryDataSource:
+    dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+    url: jdbc:mysql://192.168.10.210:3306/orm_master?useUnicode=true&characterEncoding=utf-8
+    username: koala
+    password: koala
+    poolName: SpringBootHikariCP
+    maximumPoolSize: 5
+    minimumIdle: 3
+    maxLifetime: 2000000
+    connectionTimeout: 30000
+    idleTimeout: 30000
+    pool-prepared-statements: true
+    max-open-prepared-statements: 300
+  secondaryDatasource:
+    dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+    url: jdbc:mysql://192.168.10.210:3306/orm_nodes?useUnicode=true&characterEncoding=utf-8
+    username: koala
+    password: koala
+    poolName: SpringBootHikariCP
+    maximumPoolSize: 5
+    minimumIdle: 3
+    maxLifetime: 2000000
+    connectionTimeout: 30000
+    idleTimeout: 30000
+    pool-prepared-statements: true
+    max-open-prepared-statements: 300
+  jpa:
+    multitenant.default-id: orm_nodes
+    generate-ddl: false 
+    show-sql: true
+    hibernate.current_session_context_class: jta
+    databasePlatform: org.hibernate.dialect.MySQLDialect
+    properties:
+      hibernate.current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+      hibernate.cache.use_query_cache: false
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+      net.sf.ehcache.configurationResourceName: conf/ehcache-hibernate-local.xml
+      #hibernate.naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      #hibernate.implicit_naming_strategy: legacy-jpa
+  redis:
+    host: 192.168.10.230
+    port: 6379
+    password: ido85redis
+    database: 3
+    pool.max-idle: 8
+    pool.min-idle: 0
+    pool.max-active: 8
+    pool.max-wait: 0
+    #sentinel.master: # name of redis server
+    #sentinel.nodes: # comma-separated list of host:port pairs   
+          
+      
+multitenancy:
+  hibernate.multiTenancy: SCHEMA
+  hibernate.tenant_identifier_resolver: com.ido85.frame.multitenant.TenantIdResolver
+  hibernate.multi_tenant_connection_provider: com.ido85.frame.multitenant.SchemaBasedMultiTenantConnectionProvider
+    
+shiro:
+  encrypt.salt-disabled: false
+  encrypt.hash-interations: 2
+  encrypt.remember-me.cipher-key: 04feRNI3snfin3VDAF3DA==
+  session.active-session-cache-name: activeSessionsCache
+  
+threadpool:
+  core-pool-size: 10
+  max-pool-size: 20
+  queue-capacity: 1000
+  keep-alive-seconds: 300
+  
+# business log config
+businesslog.enable: true
+
+logging:
+  config: classpath:logback-dev.xml
+  path: ./logs
+  
+###send sms
+sms:
+  apiKey: 9dd84803f54ff467460e7c9ea31489f4
+  resetTemplate: 【耐特康赛】正在找回密码，您的验证码是code
+  registerTemplate: 【耐特康赛】感谢您注册WI，您的验证码是code
+  updateMobile: 【耐特康赛】亲爱的name，您的验证码是code。如非本人操作，请忽略本短信
+  commonTemplate: 【耐特康赛】您的验证码是code。如非本人操作，请忽略本短信

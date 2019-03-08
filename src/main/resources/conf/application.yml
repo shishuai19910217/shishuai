@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: wi_orm
+  profiles.active: dev
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

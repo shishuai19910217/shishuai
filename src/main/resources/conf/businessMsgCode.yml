@@ -1,0 +1,247 @@
+﻿maps:
+########公用#######
+ COMMON_SUCCESS:
+  retCode: 0
+  retMsg: 已处理
+ COMMON_ERROR:
+  retCode: -1
+  retMsg: 未知错误
+ PARAM_ERROR:
+  retCode: -2
+  retMsg: 传入参数错误
+ QUERY_ERROR:
+  retCode: -3
+  retMsg: 查询失败
+ PARAM_IS_NULL:
+  retCode: -4
+  retMsg: 传入参数为空
+ RETURN_IS_NULL:
+  retCode: -5
+  retMsg: 未找到数据
+ UPDATE_ERROR:
+  retCode: -6
+  retMsg: 修改失败
+ ERROR:
+  retCode: -7
+  retMsg: 服务器内部错误
+ ARGUMENT_TOO:
+  retCode: -8
+  retMsg: 参数过长
+ TOO_MANY_ARGUMENT:
+  retCode: -9
+  retMsg: 参数过多
+ NOT_CRAWL:
+  retCode: -12
+  retMsg: 系统没有抓取
+ NOT_ENGINETYPE_CRAWL:
+  retCode: -13
+  retMsg: 当前搜索引擎没有抓取
+########访问登录####### 
+ LOGIN_ERROR:
+  retCode: 1000
+  retMsg: 用户名或密码错误
+ TOKEN_INVALID:
+  retCode: 1001
+  retMsg: 用户Token失效 
+ UNLOGIN_ERROR:
+  retCode: 1002
+  retMsg: 用户未登录
+ ILLEGAL_REQUEST:
+  retCode: 1003
+  retMsg: 非法请求
+ REQUEST_TIMEOUT:
+  retCode: 1004
+  retMsg: 请求超时
+ MISSING_DEVICE_INFO:
+  retCode: 1005
+  retMsg: 缺失登录设备信息
+ AUTH_ERROR:
+  retCode: 1006
+  retMsg: 身份认证已过期
+ AUTHLOGIN_ERROR:
+  retCode: 1007
+  retMsg: 该授权未绑定账号
+ ACCESSKEYID_ERROR:
+  retCode: 1008
+  retMsg: 用户AccessKeyID为空
+ NICKNAME_ERROR:
+  retCode: 1009
+  retMsg: 用户昵称错误
+ NICKNAME_EXIST:
+  retCode: 1010
+  retMsg: 用户昵称已存在
+ MOBILE_NOT_EXIST:
+  retCode: 1012
+  retMsg: 手机号码不存在
+ EMAIL_NOT_EXIST:
+  retCode: 1012
+  retMsg: 邮箱不存在
+ USER_NOT_EXIST:
+  retCode: 1013
+  retMsg: 用户不存在
+ UPDATE_PWD_ERROR:
+  retCode: 1014
+  retMsg: 修改密码失败
+########套餐#######
+ PACKAGE_NOT_EXIST:
+  retCode: 6001
+  retMsg: 未找到套餐
+ OLDPACKAGE_NOT_EXIST:
+  retCode: 6006
+  retMsg: 原套餐发生改变
+ PACKAGE_NOT_ORDER:
+  retCode: 6002
+  retMsg: 此用户不能订购
+ PACKAGE_MORE:
+  retCode: 6003
+  retMsg: 您的账户下存在多个套餐请联系管理员！
+ PACKAGE_NOT_RULE:
+  retCode: 6004
+  retMsg: 您的套餐没有配置对应规则！
+ PACKAGE_UP:
+  retCode: 6005
+  retMsg: 您不能从高等级套餐升级成低等级套餐！
+ PACKAGE_LEVEL:
+  retCode: 6006
+  retMsg: 原有套餐或套餐等级不存在！
+ PACKAGE_YEAR:
+  retCode: 6007
+  retMsg: 同套餐只能从月付费升级为年付费！
+ TENANT_PACKAGE_ERROR:
+  retCode: 6008
+  retMsg: 没有套餐实例！
+########Sts资源上传####### 
+ STS_AUTHTOKEN_ERROR:
+  retCode: 1011
+  retMsg: 获取sts授权失败
+########用户注册####### 
+ REGISTER_ERROR:
+  retCode: 1021
+  retMsg: 数据错误
+ MOBILE_ERROR:
+  retCode: 1022
+  retMsg: 手机号码已经注册
+ EMAIL_ERROR:
+  retCode: 1023
+  retMsg: 邮箱已经注册  
+ USERNAME_ERROR:
+  retCode: 1024
+  retMsg: 用户名已经注册
+ REGISTER_FAIL:
+  retCode: 1025
+  retMsg: 注册失败
+ USER_PACKAGE_EXIST:
+  retCode: 1026
+  retMsg: 用户套餐已经存在
+ USER_TRAIL_ERROR:
+  retCode: 1026
+  retMsg: 用户已经试用过
+#########短信###########
+ SMS_MOBILE_ERROR:
+  retCode: 1026
+  retMsg: 请求参数mobile值错误
+ SMS_TYPE_ERROR:
+  retCode: 1027
+  retMsg: 请求参数sms_type值错误
+ SMS_ERROR:
+  retCode: 1028
+  retMsg: 短信发送接口调用失败
+#########关键词###########
+ KEYWORD_NOT_EXIST:
+  retCode: 1101
+  retMsg: 选择的已有关键词有部分不存在
+ KEYWORD_NUM_ERROR:
+  retCode: 1102
+  retMsg: 关键词个数超过了项目可添加关键词的总数
+ GROUP_NOT_EXIST:
+  retCode: 1103
+  retMsg: 选择的分组有部分不存在
+ KEYWORD_ADD_FAIL:
+  retCode: 1104
+  retMsg: 添加关键词失败
+ PRO_KEYWORD_NOT_EXIST:
+  retCode: 1105
+  retMsg: 项目中不存在此关键词
+ ENGINE_ERROR:
+  retCode: 1106
+  retMsg: 传入的搜索引擎参数错误
+ GROUP_PARAM_ERROR:
+  retCode: 1107
+  retMsg: 已选择的分组不存在
+ KEYWORD_PARAM_ERROR:
+  retCode: 1108
+  retMsg: 已选择的分组不存在
+ KEYWORD_ADD_GROUP_FAIL:
+  retCode: 1109
+  retMsg: 对关键词设置分组失败
+ ADD_BRAND_FAIL:
+  retCode: 1110
+  retMsg: 设置品牌词失败
+ KEYWORD_LEN_ERROR:
+  retCode: 1111
+  retMsg: 关键词'{}'长度过长
+##########项目#########
+ PROJECT_ERROR:
+  retCode: 1201
+  retMsg: 项目已经失效或者不存在
+ PROJECT_NOT_EXIST:
+  retCode: 1202
+  retMsg: 项目不存在
+ PRO_ID_NOT_EXIST:
+  retCode: 1216
+  retMsg: 项目id不能为空
+ PROJECT_STATE:
+  retCode: 5003
+  retMsg: 项目状态发生改变
+ PACKAGE_ERROR:
+  retCode: 5001
+  retMsg: 套餐发现异常
+ PROJECT_NOT_ADD:
+  retCode: 5002
+  retMsg: 该套餐项目数已达到最大值
+ COM_NOT_ADD:
+  retCode: 5003
+  retMsg: 该套餐竞品数已达到最大值
+ PROJECT_COM_UPDATA_ERROR:
+  retCode: 5004
+  retMsg: 修改竞品信息失败！
+ ARCHIVE_ERROR:
+  retCode: 5005
+  retMsg: 归档项目查询失败！
+###########个人中心###########
+ OLD_PASSWORD_ERROE:
+  retCode: 1301
+  retMsg: 原密码错误
+ OLD_EMAIL_ERROE:
+  retCode: 1302
+  retMsg: 原邮箱错误
+ OLD_MOBILE_ERROE:
+  retCode: 1303
+  retMsg: 原手机号码错误
+ EMAIL_VERIFY_ERROR:
+  retCode: 1304
+  retMsg: 邮箱未经过验证
+ EMAIL_VERIFYED:
+  retCode: 1305
+  retMsg: 邮箱已经验证过
+###########快捷工具############
+ KEYWORD_NUM_TOLONGERROR:
+  retCode: 9001
+  retMsg: 关键词超出最多支持个数
+ SPIDER_ERROR:
+  retCode: 9002
+  retMsg: 爬虫出现错误
+###########订单############
+ ORDER_SAVE_ERROR:
+  retCode: 3001
+  retMsg: 订单保存失败
+ ORDER_CREATE_ERROR:
+  retCode: 3002
+  retMsg: 创建订单失败
+###########邮箱############
+ SEND_EMAIL_ERROR:
+  retCode: 1501
+  retMsg: 邮件发送失败
+ EMAIL_LINK_ERROR:
+  retCode: 1502
+  retMsg: 您的链接已经失效
